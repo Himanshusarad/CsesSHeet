@@ -1,0 +1,101 @@
+Cses Sheet
+-x-x-x-x-x-x--x-x-x-x-x-x--x-x-x-x-x-x-x--x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+1-Weird Algorithm
+public static void main(String[] args) {
+		FastReader in= new FastReader();
+		long t= in.nextInt();
+		System.out.println(t+" ");
+		long x;
+		while(t!=1) {
+			if(t%2==0) {
+				 x =even(t);
+				System.out.println(x);
+				
+			}
+			else {
+				 x=odd(t);
+				System.out.println(x);
+			
+			}
+			t=x;
+		}
+		
+	}
+	public static long even(long x) {
+		return x/2;
+	}
+	public static long odd (long x) {
+		return (x*3)+1;
+	}
+	
+  
+  
+  
+  -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-x-x
+  2---> Missing Number
+  try taking long to submit it
+  
+  public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n = in.nextInt();
+		int a[] = new int [n-1];
+		long sum=0;
+		for(int i =0;i<n-1;i++) {
+			a[i]=in.nextInt();
+			sum+=a[i];		
+		}
+		long y = n*(n+1)/2;
+		System.out.println(y-sum);
+	}
+  
+  
+  
+  -x-x-x-x-x-x--x-x-x-x-x-x--x-x-x-x-x--x-x-x-x-x-x--x-x-x-x--x-x-x-x-x-x--x-x-x-x-x--x-x-x-x-x-x-x-x-x--x-x
+  
+  3--> Repititions
+  
+  
+  public static void main(String[] args) {
+		FastReader in= new FastReader();
+		String s = in.nextLine();
+		int max=1;
+		int curr=1;
+		for(int i=0;i<s.length()-1;i++) {
+			if(s.charAt(i)==s.charAt(i+1)) curr++;
+			if(s.charAt(i)!=s.charAt(i+1)) curr=1;
+			max=Math.max(curr, max);
+		}
+//		if(s.charAt(s.length()-2)==s.charAt(s.length()-1)) max++;
+		System.out.println(max==0? 1: max);
+	}
+	
+  
+  
+  
+  
+  -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+  
+  4---> Increasing Array
+  
+  public static void main(String[] args) {
+		FastReader in = new FastReader();
+		
+			int n = in.nextInt();
+			int a[]= in.readintarray(n);
+			long sum=0;
+			for(int i =1;i<n;i++) {
+				if(a[i]<a[i-1]) {
+					sum+=a[i-1]-a[i];
+					a[i]=a[i-1];
+				}
+			}
+//			for(int i =0;i<n;i++) System.out.println(a[i]);
+			System.out.println(sum);
+		
+ 
+	}
+	
+	
+  
+  
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
