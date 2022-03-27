@@ -172,4 +172,29 @@ public static void main(String[] args) {
 	
 x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
 
-7---> Two Knights
+7---> Two Knights Not sure why is this wrong though
+
+
+
+public static void main(String[] args) {
+		FastReader in = new FastReader();
+		
+//			int n = in.nextInt();
+			long t = in.nextLong();
+			for(int i =1;i<=t;i++) {
+				if(i==2) System.out.println(6);
+				if(i==1) System.out.println(0);
+				if(i>2) {
+					long ans = i*i*(i*i-1)/2;
+					long finala =ans-4*(i-1)*(i-2);
+					System.out.println(finala);
+				}
+				
+				
+			}
+ 
+	}
+	
+	
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x	
+
