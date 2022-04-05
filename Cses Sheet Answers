@@ -284,5 +284,44 @@ public static void main(String[] args) {
 	
 	
 x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x
+11--> Restaurant Customers
+
+
+
+public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n =in.nextInt();
+		int a[]= new int[n];
+		int b[] = new int[n];
+		int i=0;
+		for(;i<n;i++) {
+			a[i]=in.nextInt();
+			b[i]=in.nextInt();
+			
+		}
+		Arrays.sort(a);
+		Arrays.sort(b);
+		int cnt=0 ,x=0,y=0;
+		int max=0;
+		while(x<n&&y<n) {
+			if(a[x]<b[y])  {
+				cnt++;
+				x++;
+			}
+			else {
+				cnt--;
+				y++;
+			}
+			max= Math.max(cnt, max);
+		}
+		System.out.println(max);
+		
+	
+		
+	}
+	
+	
+	
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-xx-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--xx-
 
 
