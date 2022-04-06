@@ -323,5 +323,133 @@ public static void main(String[] args) {
 	
 	
 x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-xx-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--xx-
+12---> Movie Festival
+
+
+public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n =in.nextInt();
+		int a[]= new int[n];
+		int b[] = new int[n];
+		int i=0;
+		for(;i<n;i++) {
+			a[i]=in.nextInt();
+			b[i]=in.nextInt();
+			
+		}
+		Arrays.sort(a);
+		Arrays.sort(b);
+		int cnt=1 ,x=0,y=0;
+	
+		for(x=0;x<n;x++) {
+			
+			if(a[x]>=b[y]) {
+//				System.out.println(a[x]+" "+b[y]);
+				cnt++;
+				y++;
+			
+			}
+		
+		}
+		System.out.println(cnt);
+	
+		
+		
+	}
+	
+	
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-x-x-x-x-
+13---> Sum of Value
+
+
+
+
+	public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n =in.nextInt();
+		int s = in.nextInt();
+		int a[]= in.readintarray(n);
+		int b[] = a.clone();
+		Arrays.sort(a);
+		long curr = 0;
+		int first= 0,i=0,j=n-1;
+		int second=0;
+		while(i<j) {
+			curr=a[i]+a[j];
+			if(curr==s) {
+				first=a[i];
+				second=a[j];
+				break;
+			}
+			if(curr<s)i++;
+			if(curr>s)j--;
+			
+		}
+//		System.out.println(first+" "+second);
+		if(first==0&&second==0) System.out.println("IMPOSSIBLE");
+		
+		else {
+			int fi=0,si=0;
+			int y=n-1;
+//			System.out.println(first+" "+second);
+			for(int x =0;x<n&&y>=0;x++) {
+				if(b[x]==first) fi=x+1;
+				if(b[y]==second) si=y+1;
+				y--;
+			}
+			System.out.println(fi+" "+si);
+		}
+			
+		
+		
+		
+	}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+14---> Maximum Subarray Sum
+
+
+
+FastReader in= new FastReader();
+		int n =in.nextInt();
+		int a[]= in.readintarray(n);
+		long curr=0,max=Integer.MIN_VALUE;
+		for(int i =0;i<n;i++) {
+			curr+=a[i];
+			if(curr<0) {
+				max=Math.max(curr, max);
+				curr=0;
+				
+			}
+			else {
+				max=Math.max(max, curr);
+			}
+		}
+		System.out.println(max);
+		
+		
+		
+		
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x--x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x
+15--> Stick Length
+
+
+
+public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n =in.nextInt();
+		int a[]= in.readintarray(n);
+		Arrays.sort(a);
+		int x=a[n/2];
+		long sum=0;
+		for(int i =0;i<n;i++) {
+			sum+=Math.abs(x-a[i]);
+		}
+		System.out.println(sum);
+		
+		
+	}
+	
+	
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
 
 
