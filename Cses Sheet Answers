@@ -451,5 +451,56 @@ public static void main(String[] args) {
 	
 	
 x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+16--> Missing Coin Sum
 
 
+
+public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n =in.nextInt();
+		int a[]= in.readintarray(n);
+		Arrays.sort(a);
+		System.out.println(sumFind(n,a));
+		
+		
+		
+		
+	}
+	public static	long sumFind(int n , int a[]) {
+		long res=1;
+		for(int i =0;i<n;i++) {
+			if(a[i]>res) return res;
+			else {
+				res+=a[i];
+			}
+		}
+		return res;
+		
+	}
+	
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+17--> COllecting Numbers
+
+
+
+public static void main(String[] args) {
+		FastReader in= new FastReader();
+		int n =in.nextInt();
+		int a[]= in.readintarray(n);
+		Pair[] list = new Pair[n];
+		for(int i =0;i<n;i++) list[i]=new Pair(a[i],i);
+		int count=0;
+		Arrays.sort(list,new Comparator<Pair>(){
+			@Override public int compare(Pair p1,Pair p2) {
+				return p1.first-p2.first;
+			}
+		});
+		int cnt=1;
+		for(int i=1;i<n;i++) {
+			if(list[i-1].second>list[i].second) cnt++;
+		}
+		System.out.println(cnt);
+		
+	}
+	
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x--x-x-x-x-x-x--x-x-x-x--x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-x
